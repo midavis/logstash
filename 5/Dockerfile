@@ -1,5 +1,8 @@
 FROM openjdk:8-jre
 
+USER root
+USER logstash
+
 # install plugin dependencies
 RUN apt-get update && apt-get install -y --no-install-recommends \
 		apt-transport-https \
